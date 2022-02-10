@@ -2,7 +2,9 @@ const rootMain = require('../../../.storybook/main');
 
 module.exports = {
   ...rootMain,
-
+  typescript: {
+    check: true,
+  },
   core: { ...rootMain.core, builder: 'webpack5' },
 
   stories: [
