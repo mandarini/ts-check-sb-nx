@@ -23,6 +23,7 @@
     "@nrwl/linter": "999.1.1",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/react": "999.1.1",
+    "@nrwl/storybook": "999.1.1",
     "@nrwl/tao": "999.1.1",
     "@nrwl/web": "999.1.1",
     "@nrwl/workspace": "999.1.1",

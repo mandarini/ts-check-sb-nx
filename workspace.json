@@ -1,6 +1,10 @@
 {
   "version": 2,
   "projects": {
+    "one": "libs/one",
+    "other": "apps/other",
+    "other-e2e": "apps/other-e2e",
+    "two": "libs/two",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
   }

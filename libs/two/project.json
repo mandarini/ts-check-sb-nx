@@ -1,0 +1,43 @@
+{
+  "root": "libs/two",
+  "sourceRoot": "libs/two/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/two",
+        "tsConfig": "libs/two/tsconfig.lib.json",
+        "project": "libs/two/package.json",
+        "entryFile": "libs/two/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/two/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/two/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/two"],
+      "options": {
+        "jestConfig": "libs/two/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
